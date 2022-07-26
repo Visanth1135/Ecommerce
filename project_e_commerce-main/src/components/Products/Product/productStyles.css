@@ -1,7 +1,6 @@
 html, body {
-  background: #E3E3D8;
   font-family: sans-serif;
-  padding: 25px;
+  
 }
 
 .wrapper {
@@ -28,6 +27,14 @@ html, body {
   height: 80%;
   width: 100%;
   background-size: 100%;
+  background-color: #f4f4f4;
+}
+
+.wrapper .container .top img{
+    width: 500px;
+    position: relative;
+    top:20%;
+    left: -30%;
 }
 .wrapper .container .bottom {
   width: 200%;

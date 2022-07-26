@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons';
+import { RemoveBgResult, RemoveBgError, removeBackgroundFromImageFile } from "remove.bg";
 import './productStyles.css'
 
 
@@ -9,8 +10,8 @@ import useStyles from './styles';
 const Product = ({ product, onAddToCart }) => {
   const classes = useStyles();
 
+  
   const handleAddToCart = () => onAddToCart(product.id, 1);
-
   return (
     <div class="wrapper">
   <div class="container">
@@ -21,7 +22,7 @@ const Product = ({ product, onAddToCart }) => {
           <h1>Chair</h1>
           <p>£250</p>
         </div>
-        <div class="buy"><i class="material-icons"><AddShoppingCart/></i></div>
+        <div class="buy"><i class="material-icons" onClick={handleAddToCart}><AddShoppingCart/></i></div>
       </div>
       <div class="right">
         <div class="done"><i class="material-icons">done</i></div>
